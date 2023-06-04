@@ -17,6 +17,7 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include <stdio.h>
 #include "main.h"
 #include "tim.h"
 #include "usart.h"
@@ -48,6 +49,10 @@ uint8_t msg = 0;
 uint8_t speed = 0;
 uint8_t tickFlag = 0;
 uint16_t pwmVal = 1;   //PWM占空比
+
+//float kp = 20;
+//float ki = 0;
+//float kd = 0;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -65,6 +70,8 @@ void goBack();
 void turnLeft();
 void turnRight();
 void stopAll();
+
+float pidOutput();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -141,6 +148,7 @@ int main(void)
       HAL_UART_Transmit(&huart1,"Get! Speed?(1-9)\r\n", sizeof("Get! Speed?(1-9)\r\n"),20);
       while ((msg != '1') && HAL_UART_Receive(&huart1, &speed, 1, 0) == HAL_OK);
       ifMsgGet = 0;
+      //goForward();
       littleCarMove();
     }
   }
@@ -192,11 +200,35 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+//float pidOutput()
+//{
+//  float err, errPre;
+//  static float integral;
+//  float output;
+//
+//  if (TRACK1 == 1 && TRACK2 == 1 && TRACK3 == 0 && TRACK4 == 1 && TRACK5 == 1) err = 0;
+//
+//  else if (TRACK1 == 1 && TRACK2 == 0 && TRACK3 == 1 && TRACK4 == 1 && TRACK5 == 1) err = -1;
+//  else if (TRACK1 == 0 && TRACK2 == 0 && TRACK3 == 1 && TRACK4 == 1 && TRACK5 == 1) err = -2;
+//  else if (TRACK1 == 0 && TRACK2 == 1 && TRACK3 == 1 && TRACK4 == 1 && TRACK5 == 1) err = -3;
+//
+//  else if (TRACK1 == 1 && TRACK2 == 1 && TRACK3 == 1 && TRACK4 == 0 && TRACK5 == 1) err = 1;
+//  else if (TRACK1 == 1 && TRACK2 == 1 && TRACK3 == 1 && TRACK4 == 0 && TRACK5 == 0) err = 2;
+//  else if (TRACK1 == 1 && TRACK2 == 1 && TRACK3 == 1 && TRACK4 == 1 && TRACK5 == 0) err = 3;
+//
+//  else err = 0;
+//
+//  integral += err;
+//  output = kp * err + ki * integral + kd * (err - errPre);
+//  errPre = err;
+//  return output;
+//}
+
 void goForward()
 {
   __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, pwmVal);    //修改比较值，修改占空比
-  //`__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, pwmVal);    //修改比较值，修改占空比
-  __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, pwmVal-70);    //修改比较值，修改占空比
+  //__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, pwmVal);    //修改比较值，修改占空比
+  __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, pwmVal+8);    //修改比较值，修改占空比
   HAL_GPIO_WritePin(MOTOR1_CTRL1_GPIO_Port, MOTOR1_CTRL1_Pin, 1);
   HAL_GPIO_WritePin(MOTOR1_CTRL2_GPIO_Port, MOTOR1_CTRL2_Pin, 0);
   HAL_GPIO_WritePin(MOTOR2_CTRL1_GPIO_Port, MOTOR2_CTRL1_Pin, 0);
@@ -214,7 +246,8 @@ void stopAll()
 void turnLeft()
 {
   //电机2反转
-  __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, pwmVal-50);    //修改比较值，修改占空比
+  __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, pwmVal-40);    //修改比较值，修改占空比
+  __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, pwmVal-5);    //修改比较值，修改占空比
   HAL_GPIO_WritePin(MOTOR1_CTRL1_GPIO_Port, MOTOR1_CTRL1_Pin, 1);
   HAL_GPIO_WritePin(MOTOR1_CTRL2_GPIO_Port, MOTOR1_CTRL2_Pin, 0);
   HAL_GPIO_WritePin(MOTOR2_CTRL1_GPIO_Port, MOTOR2_CTRL1_Pin, 1);
@@ -224,8 +257,7 @@ void turnLeft()
 void turnRight()
 {
   //电机1反转
-  __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, pwmVal-100);    //修改比较值，修改占空比
-  __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, pwmVal+40);    //修改比较值，修改占空比
+  __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, pwmVal-55);    //修改比较值，修改占空比
   HAL_GPIO_WritePin(MOTOR1_CTRL1_GPIO_Port, MOTOR1_CTRL1_Pin, 0);
   HAL_GPIO_WritePin(MOTOR1_CTRL2_GPIO_Port, MOTOR1_CTRL2_Pin, 1);
   HAL_GPIO_WritePin(MOTOR2_CTRL1_GPIO_Port, MOTOR2_CTRL1_Pin, 0);
@@ -255,6 +287,13 @@ void littleCarMove()
     else if (TRACK1 == 1 && TRACK2 == 1 && TRACK3 == 1 && TRACK4 == 0 && TRACK5 == 1) turnRight();
     else if (TRACK1 == 1 && TRACK2 == 1 && TRACK3 == 1 && TRACK4 == 1 && TRACK5 == 0) turnRight();
     else if (TRACK1 == 1 && TRACK2 == 1 && TRACK3 == 1 && TRACK4 == 1 && TRACK5 == 1) turnRight();
+
+//    float tempFlag = pidOutput();
+//    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, pwmVal + tempFlag);
+//    __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, pwmVal + tempFlag);
+//    if (tempFlag < 15 && tempFlag > -15) goForward();
+//    else if (tempFlag >= 15) turnLeft();
+//    else if (tempFlag <= -15) turnRight();
 
     if (tickFlag == 1)
     {

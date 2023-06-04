@@ -20,13 +20,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9f7a29e-41e8-4439-8c96-6de6db722c63" name="更改" comment="">
+    <list default="true" id="c9f7a29e-41e8-4439-8c96-6de6db722c63" name="更改" comment="添加不断闪烁的BUSY灯">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Inc/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Inc/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/gpio.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/gpio.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Src/stm32f4xx_it.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/stm32f4xx_it.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dreamLittleCar-FW.ioc" beforeDir="false" afterPath="$PROJECT_DIR$/dreamLittleCar-FW.ioc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamLittleCar-FW.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamLittleCar-FW.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamLittleCar-FW.elf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamLittleCar-FW.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dreamLittleCar-FW.hex" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dreamLittleCar-FW.hex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +74,9 @@
     </key>
   </component>
   <component name="RunManager" selected="嵌入式 GDB 服务器.Jlink GDB Server">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="dreamLittleCar-FW.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dreamLittleCar-FW" TARGET_NAME="dreamLittleCar-FW.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dreamLittleCar-FW" RUN_TARGET_NAME="dreamLittleCar-FW.elf">
@@ -113,8 +112,17 @@
       <workItem from="1685778938172" duration="1661000" />
       <workItem from="1685780985460" duration="3285000" />
       <workItem from="1685803785272" duration="11034000" />
-      <workItem from="1685861015087" duration="16327000" />
+      <workItem from="1685861015087" duration="20048000" />
+      <workItem from="1685900038962" duration="2853000" />
     </task>
+    <task id="LOCAL-00001" summary="添加不断闪烁的BUSY灯">
+      <created>1685895696537</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685895696538</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,5 +133,9 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticFoundErrors value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加不断闪烁的BUSY灯" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加不断闪烁的BUSY灯" />
   </component>
 </project>
