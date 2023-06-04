@@ -192,6 +192,8 @@ void SysTick_Handler(void)
   {
     tickCount = 0;
     tickFlag = 1;
+    HAL_GPIO_TogglePin(RGB2_GPIO_Port, RGB2_Pin);
+    HAL_GPIO_TogglePin(RGB3_GPIO_Port, RGB3_Pin);
   }
   /* USER CODE END SysTick_IRQn 1 */
 }

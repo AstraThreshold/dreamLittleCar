@@ -58,6 +58,12 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define RGB1_Pin GPIO_PIN_0
+#define RGB1_GPIO_Port GPIOA
+#define RGB2_Pin GPIO_PIN_1
+#define RGB2_GPIO_Port GPIOA
+#define RGB3_Pin GPIO_PIN_2
+#define RGB3_GPIO_Port GPIOA
 #define MOTOR2_CTRL1_Pin GPIO_PIN_6
 #define MOTOR2_CTRL1_GPIO_Port GPIOA
 #define MOTOR2_CTRL2_Pin GPIO_PIN_7
