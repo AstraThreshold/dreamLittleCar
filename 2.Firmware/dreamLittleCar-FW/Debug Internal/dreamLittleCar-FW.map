@@ -1,0 +1,894 @@
+***********************************************************************************************
+***                                                                                         ***
+***                                    LINK INFORMATION                                     ***
+***                                                                                         ***
+***********************************************************************************************
+
+Linker version:
+
+  SEGGER ARM Linker 4.38.4 compiled May 10 2023 01:24:59
+  Copyright (c) 2017-2022 SEGGER Microcontroller GmbH    www.segger.com
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                     MODULE SUMMARY                                      ***
+***                                                                                         ***
+***********************************************************************************************
+
+Memory use by input file:
+
+  Object File                                       RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Cortex_M_Startup.o                                     32                                    
+  gpio.o                                                166                                    
+  main.o                                                252          15                        
+  SEGGER_THUMB_Startup.o                                 20                                    
+  startup_stm32f411xe.o                                   2         408                        
+  stm32f4xx_hal.o                                       172                       5           4
+  stm32f4xx_hal_cortex.o                                192                                    
+  stm32f4xx_hal_dma.o                                 1 032           8                        
+  stm32f4xx_hal_gpio.o                                  420                                    
+  stm32f4xx_hal_msp.o                                    56                                    
+  stm32f4xx_hal_rcc.o                                 1 364                                    
+  stm32f4xx_hal_tim.o                                 1 714                                    
+  stm32f4xx_hal_tim_ex.o                                228                                    
+  stm32f4xx_hal_uart.o                                1 672                                    
+  stm32f4xx_it.o                                         68                                    
+  system_stm32f4xx.o                                     18          24           4            
+  tim.o                                               1 190                                 288
+  usart.o                                               528                                 328
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (18 objects)                               9 126         455           9         620
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a
+                                                        304                                    
+  SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a
+                                                         38                                    
+  strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a
+                                                        104                                    
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (3 archives)                                 446                                    
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Linker created (shared data, fills, blocks):                       44                   1 536
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                              9 572         499           9       2 156
+  =============================================  ==========  ==========  ==========  ==========
+
+Memory use by archive member:
+
+  Archive member                                    RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  intasmops_arm.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                                                        304                                    
+  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                                                         38                                    
+  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                                                        104                                    
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (3 members from 3 archives)                  446                                    
+  Objects (18 files)                                  9 126         455           9         620
+  Linker created (shared data, fills, blocks):                       44                   1 536
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                              9 572         499           9       2 156
+  =============================================  ==========  ==========  ==========  ==========
+
+Memory use by linker:
+
+  Description                                       RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Initialization table                                               44                        
+  Memory for block 'heap'                                                                 1 536
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (linker created):                                         44                   1 536
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Objects (18 files)                                  9 126         455           9         620
+  Archives (3 files)                                    446                                    
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                              9 572         499           9       2 156
+  =============================================  ==========  ==========  ==========  ==========
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                     SECTION DETAIL                                      ***
+***                                                                                         ***
+***********************************************************************************************
+
+Sections by address:
+
+  Range              Symbol or [section] Name         Size  Al  Init  Ac  Object File
+  -----------------  -------------------------  ----------  --  ----  --  -----------
+  08000000-08000197  g_pfnVectors                      408   1  Cnst  RO  startup_stm32f411xe.o
+  08000198-080004d5  HAL_RCC_OscConfig                 830   4  Code  RX  stm32f4xx_hal_rcc.o
+  080004d6-080004d7  SVC_Handler                         2   2  Code  RX  stm32f4xx_it.o
+  080004d8-080007a1  HAL_UART_IRQHandler               714   4  Code  RX  stm32f4xx_hal_uart.o
+  080007a2-080007a3  PendSV_Handler                      2   2  Code  RX  stm32f4xx_it.o
+  080007a4-0800093d  HAL_GPIO_Init                     410   4  Code  RX  stm32f4xx_hal_gpio.o
+  0800093e-0800093f  HAL_UART_TxHalfCpltCallback
+                                                         2   2  Code  RX  stm32f4xx_hal_uart.o
+  08000940-08000ac9  HAL_DMA_IRQHandler                394   4  Code  RX  stm32f4xx_hal_dma.o
+  08000aca-08000acb  HAL_UART_TxCpltCallback             2   2  Code  RX  stm32f4xx_hal_uart.o
+  08000acc-08000c2d  HAL_RCC_ClockConfig               354   4  Code  RX  stm32f4xx_hal_rcc.o
+  08000c2e-08000c2f  HAL_UART_RxCpltCallback             2   2  Code  RX  stm32f4xx_hal_uart.o
+  08000c30-08000d6b  HAL_DMA_Init                      316   4  Code  RX  stm32f4xx_hal_dma.o
+  08000d6c-08000e9b  __aeabi_uldivmod                  304   4  Code  RX  intasmops_arm.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08000e9c-08000fb9  HAL_TIM_IC_ConfigChannel          286   4  Code  RX  stm32f4xx_hal_tim.o
+  08000fba-08000fbb  HAL_UART_ErrorCallback              2   2  Code  RX  stm32f4xx_hal_uart.o
+  08000fbc-080010a9  HAL_TIM_PWM_ConfigChannel         238   4  Code  RX  stm32f4xx_hal_tim.o
+  080010aa-080010ab  HAL_UARTEx_RxEventCallback
+                                                         2   2  Code  RX  stm32f4xx_hal_uart.o
+  080010ac-0800116d  UART_Receive_IT                   194   4  Code  RX  stm32f4xx_hal_uart.o
+  0800116e-0800116f  HAL_TIM_TriggerCallback             2   2  Code  RX  stm32f4xx_hal_tim.o
+  08001170-08001211  SystemClock_Config                162   4  Code  RX  main.o
+  08001212-08001213  HAL_TIM_PeriodElapsedCallback
+                                                         2   2  Code  RX  stm32f4xx_hal_tim.o
+  08001214-080012a3  HAL_UART_Transmit_DMA             144   4  Code  RX  stm32f4xx_hal_uart.o
+  080012a4-08001323  HAL_DMA_Abort                     128   4  Code  RX  stm32f4xx_hal_dma.o
+  08001324-0800138b  __aeabi_memclr                    104   4  Code  RX  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0800138c-080013f3  UART_DMAError                     104   4  Code  RX  stm32f4xx_hal_uart.o
+  080013f4-0800144f  UART_EndRxTransfer                 92   4  Code  RX  stm32f4xx_hal_uart.o
+  08001450-080014a3  main                               84   4  Code  RX  main.o
+  080014a4-080014e9  UART_DMATransmitCplt               70   4  Code  RX  stm32f4xx_hal_uart.o
+  080014ea-080014eb  HAL_TIM_PWM_PulseFinishedCallback
+                                                         2   2  Code  RX  stm32f4xx_hal_tim.o
+  080014ec-080014ff  _start                             20   4  Code  RX  SEGGER_THUMB_Startup.o
+  08001500-08001505  Error_Handler                       6   4  Code  RX  main.o
+  08001506-08001507  HAL_TIM_OC_DelayElapsedCallback
+                                                         2   2  Code  RX  stm32f4xx_hal_tim.o
+  08001508-08001509  UsageFault_Handler                  2   4  Code  RX  stm32f4xx_it.o
+  0800150a-0800150b  HAL_TIM_IC_CaptureCallback
+                                                         2   2  Code  RX  stm32f4xx_hal_tim.o
+  0800150c-0800150d  NMI_Handler                         2   4  Code  RX  stm32f4xx_it.o
+  0800150e-0800150f  HAL_TIMEx_CommutCallback            2   2  Code  RX  stm32f4xx_hal_tim_ex.o
+  08001510-08001511  MemManage_Handler                   2   4  Code  RX  stm32f4xx_it.o
+  08001512-08001513  HAL_TIMEx_BreakCallback             2   2  Code  RX  stm32f4xx_hal_tim_ex.o
+  08001514-08001515  HardFault_Handler                   2   4  Code  RX  stm32f4xx_it.o
+  08001516-08001517  Infinite_Loop                       2   2  Code  RX  startup_stm32f411xe.o
+  08001518-08001519  BusFault_Handler                    2   4  Code  RX  stm32f4xx_it.o
+  0800151a-080016b1  HAL_UART_MspInit                  408   2  Code  RX  usart.o
+  080016b2-0800181b  HAL_TIM_IRQHandler                362   2  Code  RX  stm32f4xx_hal_tim.o
+  0800181c-08001905  MX_TIM1_Init                      234   2  Code  RX  tim.o
+  08001906-080019ed  UART_SetConfig                    232   2  Code  RX  stm32f4xx_hal_uart.o
+  080019ee-08001ac7  TIM_Base_SetConfig                218   2  Code  RX  stm32f4xx_hal_tim.o
+  08001ac8-08001b9d  MX_TIM2_Init                      214   2  Code  RX  tim.o
+  08001b9e-08001c53  HAL_TIM_MspPostInit               182   2  Code  RX  tim.o
+  08001c54-08001cfd  MX_TIM3_Init                      170   2  Code  RX  tim.o
+  08001cfe-08001da3  MX_GPIO_Init                      166   2  Code  RX  gpio.o
+  08001da4-08001e41  HAL_DMA_Start_IT                  158   2  Code  RX  stm32f4xx_hal_dma.o
+  08001e42-08001ed5  HAL_TIMEx_MasterConfigSynchronization
+                                                       148   2  Code  RX  stm32f4xx_hal_tim_ex.o
+  08001ed6-08001f5b  HAL_TIM_PWM_MspInit               134   2  Code  RX  tim.o
+  08001f5c-08001fdf  TIM_TI1_SetConfig                 132   2  Code  RX  stm32f4xx_hal_tim.o
+  08001fe0-08002061  MX_TIM4_Init                      130   2  Code  RX  tim.o
+  08002062-080020df  HAL_TIM_IC_MspInit                126   2  Code  RX  tim.o
+  080020e0-08002147  HAL_RCC_GetSysClockFreq           104   2  Code  RX  stm32f4xx_hal_rcc.o
+  08002148-080021a9  TIM_OC2_SetConfig                  98   2  Code  RX  stm32f4xx_hal_tim.o
+  080021aa-08002209  TIM_OC3_SetConfig                  96   2  Code  RX  stm32f4xx_hal_tim.o
+  0800220a-08002267  TIM_OC1_SetConfig                  94   2  Code  RX  stm32f4xx_hal_tim.o
+  08002268-080022c5  HAL_UART_Init                      94   2  Code  RX  stm32f4xx_hal_uart.o
+  080022c6-0800231f  HAL_TIM_PWM_Init                   90   2  Code  RX  stm32f4xx_hal_tim.o
+  08002320-08002379  HAL_TIM_IC_Init                    90   2  Code  RX  stm32f4xx_hal_tim.o
+  0800237a-080023cf  HAL_NVIC_SetPriority               86   2  Code  RX  stm32f4xx_hal_cortex.o
+  080023d0-0800241f  HAL_InitTick                       80   2  Code  RX  stm32f4xx_hal.o
+  08002420-0800246b  HAL_TIMEx_ConfigBreakDeadTime
+                                                        76   2  Code  RX  stm32f4xx_hal_tim_ex.o
+  0800246c-080024a7  MX_USART6_UART_Init                60   2  Code  RX  usart.o
+  080024a8-080024e3  MX_USART1_UART_Init                60   2  Code  RX  usart.o
+  080024e4-0800251b  HAL_MspInit                        56   2  Code  RX  stm32f4xx_hal_msp.o
+  0800251c-08002551  HAL_Init                           54   2  Code  RX  stm32f4xx_hal.o
+  08002552-0800257b  HAL_SYSTICK_Config                 42   2  Code  RX  stm32f4xx_hal_cortex.o
+  0800257c-080025a1  HAL_RCC_GetPCLK2Freq               38   2  Code  RX  stm32f4xx_hal_rcc.o
+  080025a2-080025c7  HAL_RCC_GetPCLK1Freq               38   2  Code  RX  stm32f4xx_hal_rcc.o
+  080025c8-080025eb  HAL_DMA_Abort_IT                   36   2  Code  RX  stm32f4xx_hal_dma.o
+  080025ec-0800260b  HAL_NVIC_SetPriorityGrouping
+                                                        32   2  Code  RX  stm32f4xx_hal_cortex.o
+  0800260c-0800262b  HAL_NVIC_EnableIRQ                 32   2  Code  RX  stm32f4xx_hal_cortex.o
+  0800262c-0800264b  Reset_Handler                      32   2  Code  RX  Cortex_M_Startup.o
+  0800264c-08002665  HAL_IncTick                        26   2  Code  RX  stm32f4xx_hal.o
+  08002666-08002677  SystemInit                         18   2  Code  RX  system_stm32f4xx.o
+  08002678-08002683  USART6_IRQHandler                  12   2  Code  RX  stm32f4xx_it.o
+  08002684-0800268f  UART_DMAAbortOnError               12   2  Code  RX  stm32f4xx_hal_uart.o
+  08002690-0800269b  TIM4_IRQHandler                    12   2  Code  RX  stm32f4xx_it.o
+  0800269c-080026a7  HAL_GetTick                        12   2  Code  RX  stm32f4xx_hal.o
+  080026a8-080026b3  DMA2_Stream6_IRQHandler            12   2  Code  RX  stm32f4xx_it.o
+  080026b4-080026bf  DMA2_Stream1_IRQHandler            12   2  Code  RX  stm32f4xx_it.o
+  080026c0-080026c9  HAL_GPIO_WritePin                  10   2  Code  RX  stm32f4xx_hal_gpio.o
+  080026ca-080026cf  UART_DMATxHalfCplt                  6   2  Code  RX  stm32f4xx_hal_uart.o
+  080026d0-080026d3  SysTick_Handler                     4   2  Code  RX  stm32f4xx_it.o
+  080026d4-080026d5  DebugMon_Handler                    2   2  Code  RX  stm32f4xx_it.o
+  080026d6-080026e5  AHBPrescTable                      16   1  Cnst  RO  system_stm32f4xx.o
+  080026e6-080026ed  DMA_CalcBaseAndBitshift.flagBitshiftOffset
+                                                         8   1  Cnst  RO  stm32f4xx_hal_dma.o
+  080026ee-080026f5  APBPrescTable                       8   1  Cnst  RO  system_stm32f4xx.o
+  080026f6-080026fd  [.rodata..L.str]                    8   1  Cnst  RO  main.o
+  080026fe-08002704  [.rodata..L.str.1]                  7   1  Cnst  RO  main.o
+  08002705-08002707  ( UNUSED .=.+3 )                    3   -  ----  -   -
+  08002708-08002727  __SEGGER_init_table__              32   4  Cnst  RO  [ Linker created ]
+  08002728-08002733  __SEGGER_init_data__               12   4  Cnst  RO  [ Linker created ]
+  08002734-08002747  __SEGGER_init_copy                 20   2  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002748-08002759  __SEGGER_init_zero                 18   2  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0800275a-1fffffff  ( UNUSED .=.+402643110 )   402 643 110
+                                                             -  ----  -   -
+  20000000-20000003  uwTickPrio                          4   4  Init  RW  stm32f4xx_hal.o
+  20000004-20000007  SystemCoreClock                     4   4  Init  RW  system_stm32f4xx.o
+  20000008-20000008  uwTickFreq                          1   1  Init  RW  stm32f4xx_hal.o
+  20000009-2000000b  ( UNUSED .=.+3 )                    3   -  ----  -   -
+  2000000c-2000006b  hdma_usart6_tx                     96   4  Zero  ZI  usart.o
+  2000006c-200000cb  hdma_usart6_rx                     96   4  Zero  ZI  usart.o
+  200000cc-20000113  htim4                              72   4  Zero  ZI  tim.o
+  20000114-2000015b  htim3                              72   4  Zero  ZI  tim.o
+  2000015c-200001a3  htim2                              72   4  Zero  ZI  tim.o
+  200001a4-200001eb  htim1                              72   4  Zero  ZI  tim.o
+  200001ec-2000022f  huart6                             68   4  Zero  ZI  usart.o
+  20000230-20000273  huart1                             68   4  Zero  ZI  usart.o
+  20000274-20000277  uwTick                              4   4  Zero  ZI  stm32f4xx_hal.o
+  20000278-20000877  [.bss.block.heap]               1 536   8  None  ZI  [ Linker created ]
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                       SYMBOL LIST                                       ***
+***                                                                                         ***
+***********************************************************************************************
+
+Function symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  ADC_IRQHandler             0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  BusFault_Handler           0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  BusFault_Handler           0x08001519           2      4  Code  Gb  stm32f4xx_it.o
+  DMA1_Stream0_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream1_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream2_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream3_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream4_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream5_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream6_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream7_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream0_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream1_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream1_IRQHandler    0x080026B5          12      2  Code  Gb  stm32f4xx_it.o
+  DMA2_Stream2_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream3_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream4_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream5_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream6_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream6_IRQHandler    0x080026A9          12      2  Code  Gb  stm32f4xx_it.o
+  DMA2_Stream7_IRQHandler    0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DebugMon_Handler           0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  DebugMon_Handler           0x080026D5           2      2  Code  Gb  stm32f4xx_it.o
+  EXTI0_IRQHandler           0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  EXTI15_10_IRQHandler       0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  EXTI1_IRQHandler           0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  EXTI2_IRQHandler           0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  EXTI3_IRQHandler           0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  EXTI4_IRQHandler           0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  EXTI9_5_IRQHandler         0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  Error_Handler              0x08001501           6      4  Code  Gb  main.o
+  FLASH_IRQHandler           0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  FPU_IRQHandler             0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  HAL_DMA_Abort              0x080012A5         128      4  Code  Gb  stm32f4xx_hal_dma.o
+  HAL_DMA_Abort_IT           0x080025C9          36      2  Code  Gb  stm32f4xx_hal_dma.o
+  HAL_DMA_IRQHandler         0x08000941         394      4  Code  Gb  stm32f4xx_hal_dma.o
+  HAL_DMA_Init               0x08000C31         316      4  Code  Gb  stm32f4xx_hal_dma.o
+  HAL_DMA_Start_IT           0x08001DA5         158      2  Code  Gb  stm32f4xx_hal_dma.o
+  HAL_GPIO_Init              0x080007A5         410      4  Code  Gb  stm32f4xx_hal_gpio.o
+  HAL_GPIO_WritePin          0x080026C1          10      2  Code  Gb  stm32f4xx_hal_gpio.o
+  HAL_GetTick                0x0800269D          12      2  Code  Wk  stm32f4xx_hal.o
+  HAL_IncTick                0x0800264D          26      2  Code  Wk  stm32f4xx_hal.o
+  HAL_Init                   0x0800251D          54      2  Code  Gb  stm32f4xx_hal.o
+  HAL_InitTick               0x080023D1          80      2  Code  Wk  stm32f4xx_hal.o
+  HAL_MspInit                0x080024E5          56      2  Code  Gb  stm32f4xx_hal_msp.o
+  HAL_NVIC_EnableIRQ         0x0800260D          32      2  Code  Gb  stm32f4xx_hal_cortex.o
+  HAL_NVIC_SetPriority       0x0800237B          86      2  Code  Gb  stm32f4xx_hal_cortex.o
+  HAL_NVIC_SetPriorityGrouping
+                             0x080025ED          32      2  Code  Gb  stm32f4xx_hal_cortex.o
+  HAL_RCC_ClockConfig        0x08000ACD         354      4  Code  Gb  stm32f4xx_hal_rcc.o
+  HAL_RCC_GetPCLK1Freq       0x080025A3          38      2  Code  Gb  stm32f4xx_hal_rcc.o
+  HAL_RCC_GetPCLK2Freq       0x0800257D          38      2  Code  Gb  stm32f4xx_hal_rcc.o
+  HAL_RCC_GetSysClockFreq    0x080020E1         104      2  Code  Wk  stm32f4xx_hal_rcc.o
+  HAL_RCC_OscConfig          0x08000199         830      4  Code  Wk  stm32f4xx_hal_rcc.o
+  HAL_SYSTICK_Config         0x08002553          42      2  Code  Gb  stm32f4xx_hal_cortex.o
+  HAL_TIMEx_BreakCallback    0x08001513           2      2  Code  Wk  stm32f4xx_hal_tim_ex.o
+  HAL_TIMEx_CommutCallback   0x0800150F           2      2  Code  Wk  stm32f4xx_hal_tim_ex.o
+  HAL_TIMEx_ConfigBreakDeadTime
+                             0x08002421          76      2  Code  Gb  stm32f4xx_hal_tim_ex.o
+  HAL_TIMEx_MasterConfigSynchronization
+                             0x08001E43         148      2  Code  Gb  stm32f4xx_hal_tim_ex.o
+  HAL_TIM_IC_CaptureCallback
+                             0x0800150B           2      2  Code  Wk  stm32f4xx_hal_tim.o
+  HAL_TIM_IC_ConfigChannel   0x08000E9D         286      4  Code  Gb  stm32f4xx_hal_tim.o
+  HAL_TIM_IC_Init            0x08002321          90      2  Code  Gb  stm32f4xx_hal_tim.o
+  HAL_TIM_IC_MspInit         0x08002063         126      2  Code  Gb  tim.o
+  HAL_TIM_IRQHandler         0x080016B3         362      2  Code  Gb  stm32f4xx_hal_tim.o
+  HAL_TIM_MspPostInit        0x08001B9F         182      2  Code  Gb  tim.o
+  HAL_TIM_OC_DelayElapsedCallback
+                             0x08001507           2      2  Code  Wk  stm32f4xx_hal_tim.o
+  HAL_TIM_PWM_ConfigChannel  0x08000FBD         238      4  Code  Gb  stm32f4xx_hal_tim.o
+  HAL_TIM_PWM_Init           0x080022C7          90      2  Code  Gb  stm32f4xx_hal_tim.o
+  HAL_TIM_PWM_MspInit        0x08001ED7         134      2  Code  Gb  tim.o
+  HAL_TIM_PWM_PulseFinishedCallback
+                             0x080014EB           2      2  Code  Wk  stm32f4xx_hal_tim.o
+  HAL_TIM_PeriodElapsedCallback
+                             0x08001213           2      2  Code  Wk  stm32f4xx_hal_tim.o
+  HAL_TIM_TriggerCallback    0x0800116F           2      2  Code  Wk  stm32f4xx_hal_tim.o
+  HAL_UARTEx_RxEventCallback
+                             0x080010AB           2      2  Code  Wk  stm32f4xx_hal_uart.o
+  HAL_UART_ErrorCallback     0x08000FBB           2      2  Code  Wk  stm32f4xx_hal_uart.o
+  HAL_UART_IRQHandler        0x080004D9         714      4  Code  Gb  stm32f4xx_hal_uart.o
+  HAL_UART_Init              0x08002269          94      2  Code  Gb  stm32f4xx_hal_uart.o
+  HAL_UART_MspInit           0x0800151B         408      2  Code  Gb  usart.o
+  HAL_UART_RxCpltCallback    0x08000C2F           2      2  Code  Wk  stm32f4xx_hal_uart.o
+  HAL_UART_Transmit_DMA      0x08001215         144      4  Code  Gb  stm32f4xx_hal_uart.o
+  HAL_UART_TxCpltCallback    0x08000ACB           2      2  Code  Wk  stm32f4xx_hal_uart.o
+  HAL_UART_TxHalfCpltCallback
+                             0x0800093F           2      2  Code  Wk  stm32f4xx_hal_uart.o
+  HardFault_Handler          0x08001515           2      4  Code  Gb  stm32f4xx_it.o
+  HardFault_Handler          0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  I2C1_ER_IRQHandler         0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  I2C1_EV_IRQHandler         0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  I2C2_ER_IRQHandler         0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  I2C2_EV_IRQHandler         0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  I2C3_ER_IRQHandler         0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  I2C3_EV_IRQHandler         0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  MX_GPIO_Init               0x08001CFF         166      2  Code  Gb  gpio.o
+  MX_TIM1_Init               0x0800181D         234      2  Code  Gb  tim.o
+  MX_TIM2_Init               0x08001AC9         214      2  Code  Gb  tim.o
+  MX_TIM3_Init               0x08001C55         170      2  Code  Gb  tim.o
+  MX_TIM4_Init               0x08001FE1         130      2  Code  Gb  tim.o
+  MX_USART1_UART_Init        0x080024A9          60      2  Code  Gb  usart.o
+  MX_USART6_UART_Init        0x0800246D          60      2  Code  Gb  usart.o
+  MemManage_Handler          0x08001511           2      4  Code  Gb  stm32f4xx_it.o
+  MemManage_Handler          0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  NMI_Handler                0x0800150D           2      4  Code  Gb  stm32f4xx_it.o
+  NMI_Handler                0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  OTG_FS_IRQHandler          0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  OTG_FS_WKUP_IRQHandler     0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  PVD_IRQHandler             0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  PendSV_Handler             0x080007A3           2      2  Code  Gb  stm32f4xx_it.o
+  PendSV_Handler             0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  RCC_IRQHandler             0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  RTC_Alarm_IRQHandler       0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  RTC_WKUP_IRQHandler        0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  Reset_Handler              0x0800262D          32      2  Code  Gb  Cortex_M_Startup.o
+  SDIO_IRQHandler            0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  SPI1_IRQHandler            0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  SPI2_IRQHandler            0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  SPI3_IRQHandler            0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  SPI4_IRQHandler            0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  SPI5_IRQHandler            0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  SVC_Handler                0x080004D7           2      2  Code  Gb  stm32f4xx_it.o
+  SVC_Handler                0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  SysTick_Handler            0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  SysTick_Handler            0x080026D1           4      2  Code  Gb  stm32f4xx_it.o
+  SystemClock_Config         0x08001171         162      4  Code  Gb  main.o
+  SystemInit                 0x08002667          18      2  Code  Gb  system_stm32f4xx.o
+  TAMP_STAMP_IRQHandler      0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  TIM1_BRK_TIM9_IRQHandler   0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  TIM1_CC_IRQHandler         0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  TIM1_TRG_COM_TIM11_IRQHandler
+                             0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  TIM1_UP_TIM10_IRQHandler   0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  TIM2_IRQHandler            0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  TIM3_IRQHandler            0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  TIM4_IRQHandler            0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  TIM4_IRQHandler            0x08002691          12      2  Code  Gb  stm32f4xx_it.o
+  TIM5_IRQHandler            0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  TIM_Base_SetConfig         0x080019EF         218      2  Code  Gb  stm32f4xx_hal_tim.o
+  TIM_OC1_SetConfig          0x0800220B          94      2  Code  Lc  stm32f4xx_hal_tim.o
+  TIM_OC2_SetConfig          0x08002149          98      2  Code  Gb  stm32f4xx_hal_tim.o
+  TIM_OC3_SetConfig          0x080021AB          96      2  Code  Lc  stm32f4xx_hal_tim.o
+  TIM_TI1_SetConfig          0x08001F5D         132      2  Code  Gb  stm32f4xx_hal_tim.o
+  UART_DMAAbortOnError       0x08002685          12      2  Code  Lc  stm32f4xx_hal_uart.o
+  UART_DMAError              0x0800138D         104      4  Code  Lc  stm32f4xx_hal_uart.o
+  UART_DMATransmitCplt       0x080014A5          70      4  Code  Lc  stm32f4xx_hal_uart.o
+  UART_DMATxHalfCplt         0x080026CB           6      2  Code  Lc  stm32f4xx_hal_uart.o
+  UART_EndRxTransfer         0x080013F5          92      4  Code  Lc  stm32f4xx_hal_uart.o
+  UART_Receive_IT            0x080010AD         194      4  Code  Lc  stm32f4xx_hal_uart.o
+  UART_SetConfig             0x08001907         232      2  Code  Lc  stm32f4xx_hal_uart.o
+  USART1_IRQHandler          0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  USART2_IRQHandler          0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  USART6_IRQHandler          0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  USART6_IRQHandler          0x08002679          12      2  Code  Gb  stm32f4xx_it.o
+  UsageFault_Handler         0x08001509           2      4  Code  Gb  stm32f4xx_it.o
+  UsageFault_Handler         0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  WWDG_IRQHandler            0x08001517           2      2  Code  Wk  startup_stm32f411xe.o
+  __SEGGER_init_copy         0x08002735          20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __SEGGER_init_done         0x080014F7                  4  Code  Gb  SEGGER_THUMB_Startup.o
+  __SEGGER_init_zero         0x08002749          18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memclr             0x08001325         104      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memclr4            0x08001325                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memclr8            0x08001325                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memset             0x08001327                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memset4            0x08001327                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memset8            0x08001327                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_uldivmod           0x08000D6D         302      4  Code  Wk  intasmops_arm.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __startup_complete         0x080014F7                  4  Code  Gb  SEGGER_THUMB_Startup.o
+  _start                     0x080014ED          14      4  Code  Gb  SEGGER_THUMB_Startup.o
+  exit                       0x080014FB           2      4  Code  Gb  SEGGER_THUMB_Startup.o
+  main                       0x08001451          84      4  Code  Gb  main.o
+  memset                     0x0800132D                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  reset_handler              0x0800262D          32      2  Code  Gb  Cortex_M_Startup.o
+
+Function symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x08000199  HAL_RCC_OscConfig                 830      4  Code  Wk  stm32f4xx_hal_rcc.o
+  0x080004D7  SVC_Handler                         2      2  Code  Gb  stm32f4xx_it.o
+  0x080004D9  HAL_UART_IRQHandler               714      4  Code  Gb  stm32f4xx_hal_uart.o
+  0x080007A3  PendSV_Handler                      2      2  Code  Gb  stm32f4xx_it.o
+  0x080007A5  HAL_GPIO_Init                     410      4  Code  Gb  stm32f4xx_hal_gpio.o
+  0x0800093F  HAL_UART_TxHalfCpltCallback
+                                                  2      2  Code  Wk  stm32f4xx_hal_uart.o
+  0x08000941  HAL_DMA_IRQHandler                394      4  Code  Gb  stm32f4xx_hal_dma.o
+  0x08000ACB  HAL_UART_TxCpltCallback             2      2  Code  Wk  stm32f4xx_hal_uart.o
+  0x08000ACD  HAL_RCC_ClockConfig               354      4  Code  Gb  stm32f4xx_hal_rcc.o
+  0x08000C2F  HAL_UART_RxCpltCallback             2      2  Code  Wk  stm32f4xx_hal_uart.o
+  0x08000C31  HAL_DMA_Init                      316      4  Code  Gb  stm32f4xx_hal_dma.o
+  0x08000D6D  __aeabi_uldivmod                  302      4  Code  Wk  intasmops_arm.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08000E9D  HAL_TIM_IC_ConfigChannel          286      4  Code  Gb  stm32f4xx_hal_tim.o
+  0x08000FBB  HAL_UART_ErrorCallback              2      2  Code  Wk  stm32f4xx_hal_uart.o
+  0x08000FBD  HAL_TIM_PWM_ConfigChannel         238      4  Code  Gb  stm32f4xx_hal_tim.o
+  0x080010AB  HAL_UARTEx_RxEventCallback
+                                                  2      2  Code  Wk  stm32f4xx_hal_uart.o
+  0x080010AD  UART_Receive_IT                   194      4  Code  Lc  stm32f4xx_hal_uart.o
+  0x0800116F  HAL_TIM_TriggerCallback             2      2  Code  Wk  stm32f4xx_hal_tim.o
+  0x08001171  SystemClock_Config                162      4  Code  Gb  main.o
+  0x08001213  HAL_TIM_PeriodElapsedCallback
+                                                  2      2  Code  Wk  stm32f4xx_hal_tim.o
+  0x08001215  HAL_UART_Transmit_DMA             144      4  Code  Gb  stm32f4xx_hal_uart.o
+  0x080012A5  HAL_DMA_Abort                     128      4  Code  Gb  stm32f4xx_hal_dma.o
+  0x08001325  __aeabi_memclr8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08001325  __aeabi_memclr4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08001325  __aeabi_memclr                    104      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08001327  __aeabi_memset8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08001327  __aeabi_memset4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08001327  __aeabi_memset                             4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x0800132D  memset                                     4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x0800138D  UART_DMAError                     104      4  Code  Lc  stm32f4xx_hal_uart.o
+  0x080013F5  UART_EndRxTransfer                 92      4  Code  Lc  stm32f4xx_hal_uart.o
+  0x08001451  main                               84      4  Code  Gb  main.o
+  0x080014A5  UART_DMATransmitCplt               70      4  Code  Lc  stm32f4xx_hal_uart.o
+  0x080014EB  HAL_TIM_PWM_PulseFinishedCallback
+                                                  2      2  Code  Wk  stm32f4xx_hal_tim.o
+  0x080014ED  _start                             14      4  Code  Gb  SEGGER_THUMB_Startup.o
+  0x080014F7  __startup_complete                         4  Code  Gb  SEGGER_THUMB_Startup.o
+  0x080014F7  __SEGGER_init_done                         4  Code  Gb  SEGGER_THUMB_Startup.o
+  0x080014FB  exit                                2      4  Code  Gb  SEGGER_THUMB_Startup.o
+  0x08001501  Error_Handler                       6      4  Code  Gb  main.o
+  0x08001507  HAL_TIM_OC_DelayElapsedCallback
+                                                  2      2  Code  Wk  stm32f4xx_hal_tim.o
+  0x08001509  UsageFault_Handler                  2      4  Code  Gb  stm32f4xx_it.o
+  0x0800150B  HAL_TIM_IC_CaptureCallback
+                                                  2      2  Code  Wk  stm32f4xx_hal_tim.o
+  0x0800150D  NMI_Handler                         2      4  Code  Gb  stm32f4xx_it.o
+  0x0800150F  HAL_TIMEx_CommutCallback            2      2  Code  Wk  stm32f4xx_hal_tim_ex.o
+  0x08001511  MemManage_Handler                   2      4  Code  Gb  stm32f4xx_it.o
+  0x08001513  HAL_TIMEx_BreakCallback             2      2  Code  Wk  stm32f4xx_hal_tim_ex.o
+  0x08001515  HardFault_Handler                   2      4  Code  Gb  stm32f4xx_it.o
+  0x08001517  WWDG_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  UsageFault_Handler                  2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  USART6_IRQHandler                   2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  USART2_IRQHandler                   2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  USART1_IRQHandler                   2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  TIM5_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  TIM4_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  TIM3_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  TIM2_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  TIM1_UP_TIM10_IRQHandler            2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  TIM1_TRG_COM_TIM11_IRQHandler
+                                                  2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  TIM1_CC_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  TIM1_BRK_TIM9_IRQHandler            2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  TAMP_STAMP_IRQHandler               2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  SysTick_Handler                     2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  SVC_Handler                         2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  SPI5_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  SPI4_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  SPI3_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  SPI2_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  SPI1_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  SDIO_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  RTC_WKUP_IRQHandler                 2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  RTC_Alarm_IRQHandler                2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  RCC_IRQHandler                      2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  PendSV_Handler                      2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  PVD_IRQHandler                      2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  OTG_FS_WKUP_IRQHandler              2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  OTG_FS_IRQHandler                   2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  NMI_Handler                         2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  MemManage_Handler                   2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  I2C3_EV_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  I2C3_ER_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  I2C2_EV_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  I2C2_ER_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  I2C1_EV_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  I2C1_ER_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  HardFault_Handler                   2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  FPU_IRQHandler                      2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  FLASH_IRQHandler                    2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  EXTI9_5_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  EXTI4_IRQHandler                    2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  EXTI3_IRQHandler                    2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  EXTI2_IRQHandler                    2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  EXTI1_IRQHandler                    2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  EXTI15_10_IRQHandler                2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  EXTI0_IRQHandler                    2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DebugMon_Handler                    2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA2_Stream7_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA2_Stream6_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA2_Stream5_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA2_Stream4_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA2_Stream3_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA2_Stream2_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA2_Stream1_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA2_Stream0_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA1_Stream7_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA1_Stream6_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA1_Stream5_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA1_Stream4_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA1_Stream3_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA1_Stream2_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA1_Stream1_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  DMA1_Stream0_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  BusFault_Handler                    2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001517  ADC_IRQHandler                      2      2  Code  Wk  startup_stm32f411xe.o
+  0x08001519  BusFault_Handler                    2      4  Code  Gb  stm32f4xx_it.o
+  0x0800151B  HAL_UART_MspInit                  408      2  Code  Gb  usart.o
+  0x080016B3  HAL_TIM_IRQHandler                362      2  Code  Gb  stm32f4xx_hal_tim.o
+  0x0800181D  MX_TIM1_Init                      234      2  Code  Gb  tim.o
+  0x08001907  UART_SetConfig                    232      2  Code  Lc  stm32f4xx_hal_uart.o
+  0x080019EF  TIM_Base_SetConfig                218      2  Code  Gb  stm32f4xx_hal_tim.o
+  0x08001AC9  MX_TIM2_Init                      214      2  Code  Gb  tim.o
+  0x08001B9F  HAL_TIM_MspPostInit               182      2  Code  Gb  tim.o
+  0x08001C55  MX_TIM3_Init                      170      2  Code  Gb  tim.o
+  0x08001CFF  MX_GPIO_Init                      166      2  Code  Gb  gpio.o
+  0x08001DA5  HAL_DMA_Start_IT                  158      2  Code  Gb  stm32f4xx_hal_dma.o
+  0x08001E43  HAL_TIMEx_MasterConfigSynchronization
+                                                148      2  Code  Gb  stm32f4xx_hal_tim_ex.o
+  0x08001ED7  HAL_TIM_PWM_MspInit               134      2  Code  Gb  tim.o
+  0x08001F5D  TIM_TI1_SetConfig                 132      2  Code  Gb  stm32f4xx_hal_tim.o
+  0x08001FE1  MX_TIM4_Init                      130      2  Code  Gb  tim.o
+  0x08002063  HAL_TIM_IC_MspInit                126      2  Code  Gb  tim.o
+  0x080020E1  HAL_RCC_GetSysClockFreq           104      2  Code  Wk  stm32f4xx_hal_rcc.o
+  0x08002149  TIM_OC2_SetConfig                  98      2  Code  Gb  stm32f4xx_hal_tim.o
+  0x080021AB  TIM_OC3_SetConfig                  96      2  Code  Lc  stm32f4xx_hal_tim.o
+  0x0800220B  TIM_OC1_SetConfig                  94      2  Code  Lc  stm32f4xx_hal_tim.o
+  0x08002269  HAL_UART_Init                      94      2  Code  Gb  stm32f4xx_hal_uart.o
+  0x080022C7  HAL_TIM_PWM_Init                   90      2  Code  Gb  stm32f4xx_hal_tim.o
+  0x08002321  HAL_TIM_IC_Init                    90      2  Code  Gb  stm32f4xx_hal_tim.o
+  0x0800237B  HAL_NVIC_SetPriority               86      2  Code  Gb  stm32f4xx_hal_cortex.o
+  0x080023D1  HAL_InitTick                       80      2  Code  Wk  stm32f4xx_hal.o
+  0x08002421  HAL_TIMEx_ConfigBreakDeadTime
+                                                 76      2  Code  Gb  stm32f4xx_hal_tim_ex.o
+  0x0800246D  MX_USART6_UART_Init                60      2  Code  Gb  usart.o
+  0x080024A9  MX_USART1_UART_Init                60      2  Code  Gb  usart.o
+  0x080024E5  HAL_MspInit                        56      2  Code  Gb  stm32f4xx_hal_msp.o
+  0x0800251D  HAL_Init                           54      2  Code  Gb  stm32f4xx_hal.o
+  0x08002553  HAL_SYSTICK_Config                 42      2  Code  Gb  stm32f4xx_hal_cortex.o
+  0x0800257D  HAL_RCC_GetPCLK2Freq               38      2  Code  Gb  stm32f4xx_hal_rcc.o
+  0x080025A3  HAL_RCC_GetPCLK1Freq               38      2  Code  Gb  stm32f4xx_hal_rcc.o
+  0x080025C9  HAL_DMA_Abort_IT                   36      2  Code  Gb  stm32f4xx_hal_dma.o
+  0x080025ED  HAL_NVIC_SetPriorityGrouping
+                                                 32      2  Code  Gb  stm32f4xx_hal_cortex.o
+  0x0800260D  HAL_NVIC_EnableIRQ                 32      2  Code  Gb  stm32f4xx_hal_cortex.o
+  0x0800262D  reset_handler                      32      2  Code  Gb  Cortex_M_Startup.o
+  0x0800262D  Reset_Handler                      32      2  Code  Gb  Cortex_M_Startup.o
+  0x0800264D  HAL_IncTick                        26      2  Code  Wk  stm32f4xx_hal.o
+  0x08002667  SystemInit                         18      2  Code  Gb  system_stm32f4xx.o
+  0x08002679  USART6_IRQHandler                  12      2  Code  Gb  stm32f4xx_it.o
+  0x08002685  UART_DMAAbortOnError               12      2  Code  Lc  stm32f4xx_hal_uart.o
+  0x08002691  TIM4_IRQHandler                    12      2  Code  Gb  stm32f4xx_it.o
+  0x0800269D  HAL_GetTick                        12      2  Code  Wk  stm32f4xx_hal.o
+  0x080026A9  DMA2_Stream6_IRQHandler            12      2  Code  Gb  stm32f4xx_it.o
+  0x080026B5  DMA2_Stream1_IRQHandler            12      2  Code  Gb  stm32f4xx_it.o
+  0x080026C1  HAL_GPIO_WritePin                  10      2  Code  Gb  stm32f4xx_hal_gpio.o
+  0x080026CB  UART_DMATxHalfCplt                  6      2  Code  Lc  stm32f4xx_hal_uart.o
+  0x080026D1  SysTick_Handler                     4      2  Code  Gb  stm32f4xx_it.o
+  0x080026D5  DebugMon_Handler                    2      2  Code  Gb  stm32f4xx_it.o
+  0x08002735  __SEGGER_init_copy                 20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08002749  __SEGGER_init_zero                 18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+
+Function symbols by descending size:
+
+  Symbol name                      Size  Align  Type  Bd  Object File
+  -------------------------  ----------  -----  ----  --  -----------
+  HAL_RCC_OscConfig                 830      4  Code  Wk  stm32f4xx_hal_rcc.o
+  HAL_UART_IRQHandler               714      4  Code  Gb  stm32f4xx_hal_uart.o
+  HAL_GPIO_Init                     410      4  Code  Gb  stm32f4xx_hal_gpio.o
+  HAL_UART_MspInit                  408      2  Code  Gb  usart.o
+  HAL_DMA_IRQHandler                394      4  Code  Gb  stm32f4xx_hal_dma.o
+  HAL_TIM_IRQHandler                362      2  Code  Gb  stm32f4xx_hal_tim.o
+  HAL_RCC_ClockConfig               354      4  Code  Gb  stm32f4xx_hal_rcc.o
+  HAL_DMA_Init                      316      4  Code  Gb  stm32f4xx_hal_dma.o
+  __aeabi_uldivmod                  302      4  Code  Wk  intasmops_arm.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  HAL_TIM_IC_ConfigChannel          286      4  Code  Gb  stm32f4xx_hal_tim.o
+  HAL_TIM_PWM_ConfigChannel         238      4  Code  Gb  stm32f4xx_hal_tim.o
+  MX_TIM1_Init                      234      2  Code  Gb  tim.o
+  UART_SetConfig                    232      2  Code  Lc  stm32f4xx_hal_uart.o
+  TIM_Base_SetConfig                218      2  Code  Gb  stm32f4xx_hal_tim.o
+  MX_TIM2_Init                      214      2  Code  Gb  tim.o
+  UART_Receive_IT                   194      4  Code  Lc  stm32f4xx_hal_uart.o
+  HAL_TIM_MspPostInit               182      2  Code  Gb  tim.o
+  MX_TIM3_Init                      170      2  Code  Gb  tim.o
+  MX_GPIO_Init                      166      2  Code  Gb  gpio.o
+  SystemClock_Config                162      4  Code  Gb  main.o
+  HAL_DMA_Start_IT                  158      2  Code  Gb  stm32f4xx_hal_dma.o
+  HAL_TIMEx_MasterConfigSynchronization
+                                    148      2  Code  Gb  stm32f4xx_hal_tim_ex.o
+  HAL_UART_Transmit_DMA             144      4  Code  Gb  stm32f4xx_hal_uart.o
+  HAL_TIM_PWM_MspInit               134      2  Code  Gb  tim.o
+  TIM_TI1_SetConfig                 132      2  Code  Gb  stm32f4xx_hal_tim.o
+  MX_TIM4_Init                      130      2  Code  Gb  tim.o
+  HAL_DMA_Abort                     128      4  Code  Gb  stm32f4xx_hal_dma.o
+  HAL_TIM_IC_MspInit                126      2  Code  Gb  tim.o
+  HAL_RCC_GetSysClockFreq           104      2  Code  Wk  stm32f4xx_hal_rcc.o
+  UART_DMAError                     104      4  Code  Lc  stm32f4xx_hal_uart.o
+  __aeabi_memclr                    104      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  TIM_OC2_SetConfig                  98      2  Code  Gb  stm32f4xx_hal_tim.o
+  TIM_OC3_SetConfig                  96      2  Code  Lc  stm32f4xx_hal_tim.o
+  HAL_UART_Init                      94      2  Code  Gb  stm32f4xx_hal_uart.o
+  TIM_OC1_SetConfig                  94      2  Code  Lc  stm32f4xx_hal_tim.o
+  UART_EndRxTransfer                 92      4  Code  Lc  stm32f4xx_hal_uart.o
+  HAL_TIM_IC_Init                    90      2  Code  Gb  stm32f4xx_hal_tim.o
+  HAL_TIM_PWM_Init                   90      2  Code  Gb  stm32f4xx_hal_tim.o
+  HAL_NVIC_SetPriority               86      2  Code  Gb  stm32f4xx_hal_cortex.o
+  main                               84      4  Code  Gb  main.o
+  HAL_InitTick                       80      2  Code  Wk  stm32f4xx_hal.o
+  HAL_TIMEx_ConfigBreakDeadTime
+                                     76      2  Code  Gb  stm32f4xx_hal_tim_ex.o
+  UART_DMATransmitCplt               70      4  Code  Lc  stm32f4xx_hal_uart.o
+  MX_USART1_UART_Init                60      2  Code  Gb  usart.o
+  MX_USART6_UART_Init                60      2  Code  Gb  usart.o
+  HAL_MspInit                        56      2  Code  Gb  stm32f4xx_hal_msp.o
+  HAL_Init                           54      2  Code  Gb  stm32f4xx_hal.o
+  HAL_SYSTICK_Config                 42      2  Code  Gb  stm32f4xx_hal_cortex.o
+  HAL_RCC_GetPCLK1Freq               38      2  Code  Gb  stm32f4xx_hal_rcc.o
+  HAL_RCC_GetPCLK2Freq               38      2  Code  Gb  stm32f4xx_hal_rcc.o
+  HAL_DMA_Abort_IT                   36      2  Code  Gb  stm32f4xx_hal_dma.o
+  HAL_NVIC_EnableIRQ                 32      2  Code  Gb  stm32f4xx_hal_cortex.o
+  HAL_NVIC_SetPriorityGrouping
+                                     32      2  Code  Gb  stm32f4xx_hal_cortex.o
+  Reset_Handler                      32      2  Code  Gb  Cortex_M_Startup.o
+  reset_handler                      32      2  Code  Gb  Cortex_M_Startup.o
+  HAL_IncTick                        26      2  Code  Wk  stm32f4xx_hal.o
+  __SEGGER_init_copy                 20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  SystemInit                         18      2  Code  Gb  system_stm32f4xx.o
+  __SEGGER_init_zero                 18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  _start                             14      4  Code  Gb  SEGGER_THUMB_Startup.o
+  DMA2_Stream1_IRQHandler            12      2  Code  Gb  stm32f4xx_it.o
+  DMA2_Stream6_IRQHandler            12      2  Code  Gb  stm32f4xx_it.o
+  HAL_GetTick                        12      2  Code  Wk  stm32f4xx_hal.o
+  TIM4_IRQHandler                    12      2  Code  Gb  stm32f4xx_it.o
+  UART_DMAAbortOnError               12      2  Code  Lc  stm32f4xx_hal_uart.o
+  USART6_IRQHandler                  12      2  Code  Gb  stm32f4xx_it.o
+  HAL_GPIO_WritePin                  10      2  Code  Gb  stm32f4xx_hal_gpio.o
+  Error_Handler                       6      4  Code  Gb  main.o
+  UART_DMATxHalfCplt                  6      2  Code  Lc  stm32f4xx_hal_uart.o
+  SysTick_Handler                     4      2  Code  Gb  stm32f4xx_it.o
+  ADC_IRQHandler                      2      2  Code  Wk  startup_stm32f411xe.o
+  BusFault_Handler                    2      2  Code  Wk  startup_stm32f411xe.o
+  BusFault_Handler                    2      4  Code  Gb  stm32f4xx_it.o
+  DMA1_Stream0_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream1_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream2_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream3_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream4_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream5_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream6_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA1_Stream7_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream0_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream1_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream2_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream3_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream4_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream5_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream6_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DMA2_Stream7_IRQHandler             2      2  Code  Wk  startup_stm32f411xe.o
+  DebugMon_Handler                    2      2  Code  Wk  startup_stm32f411xe.o
+  DebugMon_Handler                    2      2  Code  Gb  stm32f4xx_it.o
+  EXTI0_IRQHandler                    2      2  Code  Wk  startup_stm32f411xe.o
+  EXTI15_10_IRQHandler                2      2  Code  Wk  startup_stm32f411xe.o
+  EXTI1_IRQHandler                    2      2  Code  Wk  startup_stm32f411xe.o
+  EXTI2_IRQHandler                    2      2  Code  Wk  startup_stm32f411xe.o
+  EXTI3_IRQHandler                    2      2  Code  Wk  startup_stm32f411xe.o
+  EXTI4_IRQHandler                    2      2  Code  Wk  startup_stm32f411xe.o
+  EXTI9_5_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  FLASH_IRQHandler                    2      2  Code  Wk  startup_stm32f411xe.o
+  FPU_IRQHandler                      2      2  Code  Wk  startup_stm32f411xe.o
+  HAL_TIMEx_BreakCallback             2      2  Code  Wk  stm32f4xx_hal_tim_ex.o
+  HAL_TIMEx_CommutCallback            2      2  Code  Wk  stm32f4xx_hal_tim_ex.o
+  HAL_TIM_IC_CaptureCallback
+                                      2      2  Code  Wk  stm32f4xx_hal_tim.o
+  HAL_TIM_OC_DelayElapsedCallback
+                                      2      2  Code  Wk  stm32f4xx_hal_tim.o
+  HAL_TIM_PWM_PulseFinishedCallback
+                                      2      2  Code  Wk  stm32f4xx_hal_tim.o
+  HAL_TIM_PeriodElapsedCallback
+                                      2      2  Code  Wk  stm32f4xx_hal_tim.o
+  HAL_TIM_TriggerCallback             2      2  Code  Wk  stm32f4xx_hal_tim.o
+  HAL_UARTEx_RxEventCallback
+                                      2      2  Code  Wk  stm32f4xx_hal_uart.o
+  HAL_UART_ErrorCallback              2      2  Code  Wk  stm32f4xx_hal_uart.o
+  HAL_UART_RxCpltCallback             2      2  Code  Wk  stm32f4xx_hal_uart.o
+  HAL_UART_TxCpltCallback             2      2  Code  Wk  stm32f4xx_hal_uart.o
+  HAL_UART_TxHalfCpltCallback
+                                      2      2  Code  Wk  stm32f4xx_hal_uart.o
+  HardFault_Handler                   2      4  Code  Gb  stm32f4xx_it.o
+  HardFault_Handler                   2      2  Code  Wk  startup_stm32f411xe.o
+  I2C1_ER_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  I2C1_EV_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  I2C2_ER_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  I2C2_EV_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  I2C3_ER_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  I2C3_EV_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  MemManage_Handler                   2      4  Code  Gb  stm32f4xx_it.o
+  MemManage_Handler                   2      2  Code  Wk  startup_stm32f411xe.o
+  NMI_Handler                         2      4  Code  Gb  stm32f4xx_it.o
+  NMI_Handler                         2      2  Code  Wk  startup_stm32f411xe.o
+  OTG_FS_IRQHandler                   2      2  Code  Wk  startup_stm32f411xe.o
+  OTG_FS_WKUP_IRQHandler              2      2  Code  Wk  startup_stm32f411xe.o
+  PVD_IRQHandler                      2      2  Code  Wk  startup_stm32f411xe.o
+  PendSV_Handler                      2      2  Code  Gb  stm32f4xx_it.o
+  PendSV_Handler                      2      2  Code  Wk  startup_stm32f411xe.o
+  RCC_IRQHandler                      2      2  Code  Wk  startup_stm32f411xe.o
+  RTC_Alarm_IRQHandler                2      2  Code  Wk  startup_stm32f411xe.o
+  RTC_WKUP_IRQHandler                 2      2  Code  Wk  startup_stm32f411xe.o
+  SDIO_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  SPI1_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  SPI2_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  SPI3_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  SPI4_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  SPI5_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  SVC_Handler                         2      2  Code  Gb  stm32f4xx_it.o
+  SVC_Handler                         2      2  Code  Wk  startup_stm32f411xe.o
+  SysTick_Handler                     2      2  Code  Wk  startup_stm32f411xe.o
+  TAMP_STAMP_IRQHandler               2      2  Code  Wk  startup_stm32f411xe.o
+  TIM1_BRK_TIM9_IRQHandler            2      2  Code  Wk  startup_stm32f411xe.o
+  TIM1_CC_IRQHandler                  2      2  Code  Wk  startup_stm32f411xe.o
+  TIM1_TRG_COM_TIM11_IRQHandler
+                                      2      2  Code  Wk  startup_stm32f411xe.o
+  TIM1_UP_TIM10_IRQHandler            2      2  Code  Wk  startup_stm32f411xe.o
+  TIM2_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  TIM3_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  TIM4_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  TIM5_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  USART1_IRQHandler                   2      2  Code  Wk  startup_stm32f411xe.o
+  USART2_IRQHandler                   2      2  Code  Wk  startup_stm32f411xe.o
+  USART6_IRQHandler                   2      2  Code  Wk  startup_stm32f411xe.o
+  UsageFault_Handler                  2      4  Code  Gb  stm32f4xx_it.o
+  UsageFault_Handler                  2      2  Code  Wk  startup_stm32f411xe.o
+  WWDG_IRQHandler                     2      2  Code  Wk  startup_stm32f411xe.o
+  exit                                2      4  Code  Gb  SEGGER_THUMB_Startup.o
+  __SEGGER_init_done                         4  Code  Gb  SEGGER_THUMB_Startup.o
+  __aeabi_memclr4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memclr8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memset                             4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memset4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memset8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __startup_complete                         4  Code  Gb  SEGGER_THUMB_Startup.o
+  memset                                     4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+
+Read-write data symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  SystemCoreClock            0x20000004           4      4  Init  Gb  system_stm32f4xx.o
+  hdma_usart6_rx             0x2000006C          96      4  Zero  Gb  usart.o
+  hdma_usart6_tx             0x2000000C          96      4  Zero  Gb  usart.o
+  htim1                      0x200001A4          72      4  Zero  Gb  tim.o
+  htim2                      0x2000015C          72      4  Zero  Gb  tim.o
+  htim3                      0x20000114          72      4  Zero  Gb  tim.o
+  htim4                      0x200000CC          72      4  Zero  Gb  tim.o
+  huart1                     0x20000230          68      4  Zero  Gb  usart.o
+  huart6                     0x200001EC          68      4  Zero  Gb  usart.o
+  uwTick                     0x20000274           4      4  Zero  Gb  stm32f4xx_hal.o
+  uwTickFreq                 0x20000008           1         Init  Gb  stm32f4xx_hal.o
+  uwTickPrio                 0x20000000           4      4  Init  Gb  stm32f4xx_hal.o
+
+Read-write data symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x20000000  uwTickPrio                          4      4  Init  Gb  stm32f4xx_hal.o
+  0x20000004  SystemCoreClock                     4      4  Init  Gb  system_stm32f4xx.o
+  0x20000008  uwTickFreq                          1         Init  Gb  stm32f4xx_hal.o
+  0x2000000C  hdma_usart6_tx                     96      4  Zero  Gb  usart.o
+  0x2000006C  hdma_usart6_rx                     96      4  Zero  Gb  usart.o
+  0x200000CC  htim4                              72      4  Zero  Gb  tim.o
+  0x20000114  htim3                              72      4  Zero  Gb  tim.o
+  0x2000015C  htim2                              72      4  Zero  Gb  tim.o
+  0x200001A4  htim1                              72      4  Zero  Gb  tim.o
+  0x200001EC  huart6                             68      4  Zero  Gb  usart.o
+  0x20000230  huart1                             68      4  Zero  Gb  usart.o
+  0x20000274  uwTick                              4      4  Zero  Gb  stm32f4xx_hal.o
+
+Read-write data symbols by descending size:
+
+  Symbol name                      Size  Align  Type  Bd  Object File
+  -------------------------  ----------  -----  ----  --  -----------
+  hdma_usart6_rx                     96      4  Zero  Gb  usart.o
+  hdma_usart6_tx                     96      4  Zero  Gb  usart.o
+  htim1                              72      4  Zero  Gb  tim.o
+  htim2                              72      4  Zero  Gb  tim.o
+  htim3                              72      4  Zero  Gb  tim.o
+  htim4                              72      4  Zero  Gb  tim.o
+  huart1                             68      4  Zero  Gb  usart.o
+  huart6                             68      4  Zero  Gb  usart.o
+  SystemCoreClock                     4      4  Init  Gb  system_stm32f4xx.o
+  uwTick                              4      4  Zero  Gb  stm32f4xx_hal.o
+  uwTickPrio                          4      4  Init  Gb  stm32f4xx_hal.o
+  uwTickFreq                          1         Init  Gb  stm32f4xx_hal.o
+
+Read-only data symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  AHBPrescTable              0x080026D6          16         Cnst  Gb  system_stm32f4xx.o
+  APBPrescTable              0x080026EE           8         Cnst  Gb  system_stm32f4xx.o
+  DMA_CalcBaseAndBitshift.flagBitshiftOffset
+                             0x080026E6           8         Cnst  Lc  stm32f4xx_hal_dma.o
+  __SEGGER_init_data__       0x08002728        [12]      4  Cnst  Lc  [ Linker created ]
+  __SEGGER_init_table__      0x08002708        [32]      4  Cnst  Lc  [ Linker created ]
+  g_pfnVectors               0x08000000       [408]         Cnst  Gb  startup_stm32f411xe.o
+
+Read-only data symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x08000000  g_pfnVectors                    [408]         Cnst  Gb  startup_stm32f411xe.o
+  0x080026D6  AHBPrescTable                      16         Cnst  Gb  system_stm32f4xx.o
+  0x080026E6  DMA_CalcBaseAndBitshift.flagBitshiftOffset
+                                                  8         Cnst  Lc  stm32f4xx_hal_dma.o
+  0x080026EE  APBPrescTable                       8         Cnst  Gb  system_stm32f4xx.o
+  0x08002708  __SEGGER_init_table__            [32]      4  Cnst  Lc  [ Linker created ]
+  0x08002728  __SEGGER_init_data__             [12]      4  Cnst  Lc  [ Linker created ]
+
+Untyped symbols by name:
+
+  Symbol name                     Value        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  Default_Handler            0x08001516           2      2  Code  Gb  startup_stm32f411xe.o
+  Infinite_Loop              0x08001516         [2]      2  Code  Lc  startup_stm32f411xe.o
+  __HEAPSIZE__               0x00000600                     ----  Gb  [ Linker created ]
+  __STACKSIZE_PROCESS__      0x00000000                     ----  Gb  [ Linker created ]
+  __STACKSIZE__              0x00000000                     ----  Gb  [ Linker created ]
+  __thread_pointer$          0x00000000                     ----  Gb  [ Linker created ]
+  _estack                    0x20020000                     ----  Gb  [ Linker created ]
+
+Untyped symbols by address:
+
+       Value  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x00000000  __thread_pointer$                             ----  Gb  [ Linker created ]
+  0x00000000  __STACKSIZE__                                 ----  Gb  [ Linker created ]
+  0x00000000  __STACKSIZE_PROCESS__                         ----  Gb  [ Linker created ]
+  0x00000600  __HEAPSIZE__                                  ----  Gb  [ Linker created ]
+  0x08001516  Infinite_Loop                     [2]      2  Code  Lc  startup_stm32f411xe.o
+  0x08001516  Default_Handler                     2      2  Code  Gb  startup_stm32f411xe.o
+  0x20020000  _estack                                       ----  Gb  [ Linker created ]
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                      LINK SUMMARY                                       ***
+***                                                                                         ***
+***********************************************************************************************
+
+Memory breakdown:
+
+    9 572 bytes read-only  code    + 
+      499 bytes read-only  data    =  10 071 bytes read-only (total)
+    2 165 bytes read-write data
+
+Region summary:
+
+  Name        Range                     Size                 Used               Unused       Alignment Loss
+  ----------  -----------------  -----------  -------------------  -------------------  -------------------
+  FLASH       08000000-0807ffff      524 288       10 071   1.92%      514 217  98.08%            0   0.00%
+  RAM         20000000-2001ffff      131 072        2 165   1.65%      128 907  98.35%            0   0.00%
+
+Link complete: 0 errors, 0 warnings, 0 remarks

@@ -1,0 +1,19 @@
+*.make
+*.obj
+*.cbp
+*.PrjPcbStructure
+*.Cam
+
+# 忽略Hardware文件夹下的所有以下文件夹
+1.Hardware/**/__Previews/
+1.Hardware/**/History/
+
+1.Hardware/dreamLittleCar/Project Logs for dreamLittleCar
+
+2.Firmware/dreamLittleCar-FW/cmake-build-debug/CMakeCache.txt
+2.Firmware/dreamLittleCar-FW/cmake-build-debug/dreamLittleCar-FW.map
+
+2.Firmware/dreamLittleCar-FW/cmake-build-debug/.cmake/
+2.Firmware/dreamLittleCar-FW/cmake-build-debug/CMakeFiles/
+
+# 2.Firmware/dreamLittleCar-FW/Other/

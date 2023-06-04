@@ -1,0 +1,121 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="dreamLittleCar-FW" target="8" version="2">
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG"
+    gcc_debugging_level="Level 3"
+    gcc_omit_frame_pointer="Yes"
+    gcc_optimization_level="None"
+    hidden="Yes" />
+  <configuration
+    Name="Debug Internal"
+    inherited_configurations="Internal;Debug" />
+  <configuration Name="Internal" Platform="ARM" hidden="Yes" />
+  <configuration
+    Name="Release"
+    c_preprocessor_definitions="NDEBUG"
+    gcc_debugging_level="Level 2"
+    gcc_omit_frame_pointer="Yes"
+    gcc_optimization_level="Level 2 balanced"
+    hidden="Yes" />
+  <configuration
+    Name="Release Internal"
+    inherited_configurations="Internal;Release" />
+  <project Name="dreamLittleCar-FW">
+    <configuration
+      Name="Common"
+      arm_architecture="v7EM"
+      arm_compiler_variant="SEGGER"
+      arm_core_type="Cortex-M4"
+      arm_endian="Little"
+      arm_fpu_type="FPv4-SP-D16"
+      arm_linker_variant="SEGGER"
+      arm_simulator_memory_simulation_parameter="RWX 0x20000000,0x20000,CDCDCDCD;RX 0x8000000,0x80000,FFFFFFFF"
+      arm_target_device_name="STM32F411CE"
+      arm_target_interface_type="SWD"
+      debug_start_from_entry_point_symbol="No"
+      debug_target_connection="J-Link"
+      link_linker_script_file="$(StudioDir)/samples/SEGGER_Flash.icf"
+      linker_section_placements_segments="RAM RWX 0x20000000 0x20000;FLASH RX 0x8000000 0x80000"
+      project_directory=""
+      project_type="Executable" />
+    <configuration
+      Name="Debug"
+      arm_architecture="v7EM"
+      arm_core_type="Cortex-M4"
+      arm_endian="Little"
+      arm_fp_abi="Hard"
+      arm_fpu_type="FPv4-SP-D16"
+      arm_target_device_name="STM32F411CE"
+      c_preprocessor_definitions="USE_HAL_DRIVER;STM32F411xE"
+      c_user_include_directories="$(ProjectDir)/Core/Inc;$(ProjectDir)/Drivers/STM32F4xx_HAL_Driver/Inc;$(ProjectDir)/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;$(ProjectDir)/Drivers/CMSIS/Device/ST/STM32F4xx/Include;$(ProjectDir)/Drivers/CMSIS/Include"
+      gcc_debugging_level="Level 3"
+      gcc_optimization_level="Debug"
+      linker_additional_files=""
+      linker_section_placements_segments="FLASH1 RX 0x08000000 0x00080000;RAM1 RWX 0x20000000 0x00020000;" />
+    <configuration
+      Name="Debug Internal"
+      arm_linker_heap_size="1536"
+      arm_linker_stack_size="0"
+      build_intermediate_directory="$(Configuration)"
+      build_output_directory="$(Configuration)"
+      link_linker_script_file="STM32F411CEUx_FLASH.icf"
+      linker_additional_options="--no-auto-es-region-symbols"
+      linker_keep_symbols="g_pfnVectors"
+      linker_output_format="hex"
+      linker_printf_width_precision_supported="Yes"
+      linker_supply_memory_segments="No" />
+    <configuration
+      LIBRARY_IO_TYPE="SEMIHOST (host-formatted)"
+      Name="Internal" />
+    <configuration
+      Name="Release"
+      arm_architecture="v7EM"
+      arm_core_type="Cortex-M4"
+      arm_endian="Little"
+      arm_fp_abi="Hard"
+      arm_fpu_type="FPv4-SP-D16"
+      arm_target_device_name="STM32F411CE"
+      c_preprocessor_definitions="USE_HAL_DRIVER;STM32F411xE"
+      c_user_include_directories="$(ProjectDir)/Core/Inc;$(ProjectDir)/Drivers/STM32F4xx_HAL_Driver/Inc;$(ProjectDir)/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;$(ProjectDir)/Drivers/CMSIS/Device/ST/STM32F4xx/Include;$(ProjectDir)/Drivers/CMSIS/Include"
+      gcc_debugging_level="Level 3"
+      gcc_optimization_level="Debug"
+      linker_additional_files=""
+      linker_section_placements_segments="FLASH1 RX 0x08000000 0x00080000;RAM1 RWX 0x20000000 0x00020000;" />
+    <configuration
+      Name="Release Internal"
+      arm_linker_heap_size="1536"
+      arm_linker_stack_size="0"
+      build_intermediate_directory="$(Configuration)"
+      build_output_directory="$(Configuration)"
+      link_linker_script_file="STM32F411CEUx_FLASH.icf"
+      linker_additional_options="--no-auto-es-region-symbols"
+      linker_keep_symbols="g_pfnVectors"
+      linker_output_format="hex"
+      linker_printf_width_precision_supported="Yes"
+      linker_supply_memory_segments="No" />
+    <folder
+      Name="Core"
+      exclude="Core/; syscalls.c;sysmem.c;startup_*.s"
+      filter="*.c;*.h;*.cpp;*.hpp;*.s;*.S"
+      path="Core"
+      recurse="Yes" />
+    <folder
+      Name="Drivers"
+      exclude="Drivers/;*_PP.s;*_PP.c"
+      filter="*.c;*.h;*.cpp;*.hpp;*.s;*.S"
+      path="Drivers"
+      recurse="Yes" />
+    <folder Name="Internal Files">
+      <file file_name="$(StudioDir)/samples/Cortex_M_Startup.s" />
+      <file file_name="$(StudioDir)/samples/SEGGER_THUMB_Startup.s" />
+    </folder>
+    <folder Name="Source Files" />
+    <folder
+      Name="startup"
+      exclude="startup/;*_PP.s;*_PP.c"
+      filter="*.c;*.h;*.cpp;*.hpp;*.s;*.S"
+      path="startup"
+      recurse="Yes" />
+  </project>
+</solution>
